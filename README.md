@@ -1,38 +1,38 @@
-# Google AppEngine Vue Webapp2 Starter
-A simple application for [Google App Engine](https://appengine.google.com/), using [Vue.js](https://vuejs.org/) on the frontend and [Webapp2](https://webapp2.readthedocs.io/) on the backend.
-This project can be deployed on Google AppEngine Python Standard Environment.
+# Vue Webapp2 Boilerplate
+
+Vue Webapp2 Boilerplate is a simple application for [Google App Engine](https://appengine.google.com/), using [Vue.js](https://vuejs.org/) on the frontend and [Webapp2](https://webapp2.readthedocs.io/) on the backend. This project can be deployed on Google AppEngine Python Standard Environment.
 
 The frontend was built using the [Vue.js Webpack template](http://vuejs-templates.github.io/webpack/), and uses [vue-router](https://router.vuejs.org/) and [vuex](https://vuex.vuejs.org/); vue-router and vuex store are kept in sync using [vuex-router-sync](https://github.com/vuejs/vuex-router-sync).
 
-## Install dependencies
+It was originally created by [Valmoz](https://github.com/Valmoz), who has an equivalent version using [Vue+Flask](https://github.com/Valmoz/gae-vue-flask-starter), and the original version of this repository [Vue+WebApp2](https://github.com/Valmoz/gae-vue-webapp2-starter).
 
-Python dependencies:
 
-    pip install -t lib -r requirements.txt
+## Build
 
-Frontend dependencies (from the app folder):
+``` bash
 
-    npm install
+#clone this repo
+git clone https://github.com/chuycepeda/vue-webapp2-boilerplate.git
 
-## Local run
+#go to root
+cd vue-webapp2-boilerplate/app
 
-Run the Vue.js frontend (from the app folder):
+# install dependencies
+npm install
 
-    npm run dev
+# run the frontend at localhost:3000
+npm run dev
 
-Run the backend:
+# run the backend
+dev_appserver.py .
 
-    dev_appserver.py .
+# build for production with minification
+npm run build
 
-## Deploy
+# deploy the application on AppEngine (edit .yaml with your project)
+gcloud app deploy app.yaml
 
-Build the Vue.js frontend (from the app folder):
-
-    npm run build
-
-Deploy the application on AppEngine:
-
-    gcloud app deploy app.yaml
+```
 
 ## License
 
